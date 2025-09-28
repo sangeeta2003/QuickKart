@@ -4,7 +4,7 @@ const {JWT_SECRET} = require('../config');
 const authMiddleware = (req,res,next) =>{
     const authHeaders = req.headers.authorization;
 
-    if(!authHeaders || !authHeaders.startWith('Bearer ')){
+    if(!authHeaders || !authHeaders.startsWith('Bearer ')){
         res.status(403).json({
 
         })
